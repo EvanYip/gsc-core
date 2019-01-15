@@ -19,12 +19,9 @@
 package org.gsc.common.storage;
 
 import org.iq80.leveldb.WriteOptions;
-
 import java.util.Map;
 
-
 public interface BatchSourceInter<K, V> extends SourceInter<K, V> {
-
 
   void updateByBatch(Map<K, V> rows);
 
