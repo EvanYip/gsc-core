@@ -65,14 +65,14 @@ public class DepositImpl implements Deposit {
     return dbManager.getTransactionStore();
   }
 
-  private ContractStore getContractStore() {
-    return dbManager.getContractStore();
-  }
-
   private WitnessStore getWitnessStore() {
     return dbManager.getWitnessStore();
   }
 
+  private ContractStore getContractStore() {
+    return dbManager.getContractStore();
+  }
+  
   private VotesStore getVotesStore() {
     return dbManager.getVotesStore();
   }
@@ -348,7 +348,6 @@ public class DepositImpl implements Deposit {
     return beforeRunStorageSize.get();
   }
 
-
   @Override
   public void putAccount(Key key, Value value) {
     accountCache.put(key, value);
@@ -378,11 +377,6 @@ public class DepositImpl implements Deposit {
   public void putContract(Key key, Value value) {
     contractCache.put(key, value);
   }
-
-//  @Override
-//  public void putStorage(Key key, Value value) {
-//    storageCache.put(key, value);
-//  }
 
   @Override
   public void putStorage(Key key, Storage cache) {
