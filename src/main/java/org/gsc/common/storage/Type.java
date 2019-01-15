@@ -37,9 +37,6 @@ public class Type {
         return new Type(this);
     }
 
-    /**
-     * @return
-     */
     public boolean isDirty() {
         return (this.type & VALUE_TYPE_DIRTY) == VALUE_TYPE_DIRTY;
     }
